@@ -882,7 +882,7 @@ header .container .banner .banner-img img {
 .yt .container {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 100px;
   margin: auto;
 }
