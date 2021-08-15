@@ -104,7 +104,7 @@
             <h2>全幅窗景，全家宜居</h2>
         </div>
         <!-- Swiper -->
-        <div class="swiper-container mySwiper">
+        <div class="swiper-container mySwiper1">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="./images/輪播圖-1.jpg" alt="">
@@ -140,7 +140,7 @@
                 <span>一日生活圈將以您為中心</span>
             </div>
             <div class="brand">
-                <div class="brand-top">
+                <!-- <div class="brand-top">
                     <div class="row">
                         <div class="icon"><img src="./images/精品建材-1.jpg" alt=""></div>
                         <div class="icon"><img src="./images/精品建材-2.jpg" alt=""></div>
@@ -151,9 +151,9 @@
                         <div class="icon"><img src="./images/精品建材-5.jpg" alt=""></div>
                         <div class="icon"><img src="./images/精品建材-6.jpg" alt=""></div>
                     </div>
-                </div>
+                </div> -->
                 <div class="brand-buttom">
-                    <div class="swiper-container mySwiper">
+                    <div class="swiper-container mySwiper2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="./images/精品建材輪播-1.jpg" alt="">
@@ -242,7 +242,8 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var menu = ['精品建材-1', '精品建材-2', '精品建材-3','精品建材-4', '精品建材-5', '精品建材-6']
+        var swiper = new Swiper(".mySwiper1", {
             cssMode: true,
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -250,11 +251,31 @@
             },
             pagination: {
                 el: ".swiper-pagination",
+                clickable: true,
             },
             mousewheel: true,
             keyboard: true,
             loop: true,
             autoplay: true,
+        });
+
+        var swiper = new Swiper(".mySwiper2", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"><img src="./images/' + (menu[index]) + '.jpg" alt=""></span>';
+                },
+
+            },
+            mousewheel: true,
+            keyboard: true,
+            loop: true,
         });
     </script>
     <style type="text/css">

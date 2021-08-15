@@ -20,6 +20,9 @@ header {
         @media (max-width: 1100px) {
             flex-direction: column;
         }
+        .navbar-brand img{
+            max-width: 210px;
+        }
         .slogan {
             width: 35%;
             padding-left: 110px;
@@ -419,8 +422,12 @@ header {
         width: 100%;
         height: 100%;
         position: relative;
+        
         .swiper-slide {
             height: 955px;
+            @media (max-width: 1100px) {
+                height: unset;
+            }
             img {
                 display: block;
                 width: 100%;
@@ -495,12 +502,20 @@ header {
         }
         .brand {
             max-width: 758px;
-            margin: 180px auto;
-            @media (max-width: 1590px) {
-                margin: 90px auto 0px;
+            margin: auto;
+            padding-top: 570px;
+            padding-bottom: 50px;
+            @media (max-width: 930px) {
+                    padding-top: 510px;
             }
-            @media (max-width: 900px) {
-                margin: 20px auto 0px;                
+            @media (max-width: 680px) {
+                padding-top: 430px;
+            }
+            @media (max-width: 525px) {
+                padding-top: 370px;
+            }
+            @media (max-width: 450px) {
+                padding-top: 30px;
             }
             .brand-top {
                 .row {
@@ -523,12 +538,36 @@ header {
                     }
                 }
             }
+            .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+                bottom: unset;
+                top: -520px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                @media (max-width: 930px) {
+                    top: -460px;
+                }
+                @media (max-width: 680px) {
+                    top: -380px;
+                }
+                @media (max-width: 525px) {
+                    top: -320px;
+                }
+                @media (max-width: 450px) {
+                    display: none;
+                }
+            }
             .swiper-container {
                 width: 100%;
                 height: 100%;
                 position: relative;
+                overflow: unset;
                 .swiper-slide {
                     height: 487px;
+                    @media (max-width: 777px) {
+                        height: unset;
+                    }
                     img {
                         display: block;
                         width: 100%;
@@ -536,9 +575,28 @@ header {
                         object-fit: cover;
                     }
                 }
+                
                 .swiper-pagination-bullet {
-                    height: 14px;
-                    width: 14px;
+                    height: 230px;
+                    width: 230px;
+                    margin-bottom: 30px;
+                    opacity: 1;
+                    @media (max-width: 930px) {
+                        width: 200px;
+                        height: 200px;
+                    }
+                    @media (max-width: 680px) {
+                        width: 160px;
+                        height: 160px;
+                    }
+                    @media (max-width: 525px) {
+                        width: 130px;
+                        height: 130px;
+                    }
+                    
+                    img{
+                        width: 100%;
+                    }
                 }
             }
         }
