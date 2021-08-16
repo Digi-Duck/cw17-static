@@ -586,17 +586,6 @@ header {
                         height: 100%;
                         object-fit: cover;
                     }
-                    .big{
-                        @media (max-width: 777px) {
-                            display: none;
-                        }
-                    }
-                    .smol{
-                        display: none;
-                        @media (max-width: 777px) {
-                            display: block;
-                        }
-                    }
                 }
                 
                 .swiper-pagination-bullet {
